@@ -1,7 +1,10 @@
 services:
-  - type: static_site
-    name: handdancepad
+  - type: static
+    name: my-static-site
     env: static
-    buildCommand: ""
     staticPublishPath: .
-
+    buildCommand: ""
+    routes:
+      - type: rewrite
+        source: /
+        destination: /index.html
