@@ -1,0 +1,83 @@
+.font-roboto { font-family: 'Roboto', Arial, sans-serif !important; }
+.font-orbitron { font-family: 'Orbitron', 'Roboto', Arial, sans-serif !important; }
+
+:root {
+  --rise-cyan: #00e4ff;
+  --rise-magenta: #e800f8;
+  --rise-yellow: #ffe550;
+  --rise-dark: #1a1835;
+  --rise-gray: #dbe6ff;
+}
+.text-rise-cyan { color: var(--rise-cyan); }
+.text-rise-magenta { color: var(--rise-magenta); }
+.text-rise-yellow { color: var(--rise-yellow); }
+.text-rise-gray { color: var(--rise-gray); }
+.bg-rise-dark { background-color: var(--rise-dark); }
+.bg-rise-img { background: linear-gradient(90deg, #181d34 70%, #23244b 100%); }
+.bg-rise-gradient { background: linear-gradient(120deg, #181d34 0%, #23244b 80%, #2c1b3f 100%); }
+.drop-shadow-rise { text-shadow: 0 0 8px #00e4ffcc, 0 0 20px #e800f8cc; }
+.shadow-xl { box-shadow: 0 8px 36px 0 #00e4ff33, 0 2px 8px 0 #1a183599; }
+.static-card {
+  transition: box-shadow 0.22s;
+  border-radius: 1.5rem;
+  border-bottom: 0;
+  box-shadow: 0 2px 20px #10143f88;
+  background: linear-gradient(120deg, #23244b 85%, #2c1b3f 100%);
+}
+.screenshot-frame {
+  max-width: 100%;
+  min-width: 0;
+  box-shadow: 0 0 16px #00e4ff44, 0 2px 24px #e800f844;
+}
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  background: #16172d;
+}
+.h-1 { height: 0.35rem; }
+
+#piu-flechas {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 10;
+}
+.flecha-movil {
+  position: absolute;
+  opacity: 0.68;
+  will-change: transform, opacity, filter;
+  pointer-events: none;
+  transition: opacity 0.34s, transform 0.34s, filter 0.34s;
+  mix-blend-mode: lighten;
+  /* Glow sólo en la silueta, NO border-radius ni mask-image */
+  filter: drop-shadow(0 0 8px #fa1e9a) drop-shadow(0 0 4px #fff176) drop-shadow(0 0 6px #1e90ff);
+}
+.flecha-fadein {
+  animation: flecha-appear 0.7s cubic-bezier(.55,.01,.44,1.01) both;
+}
+.flecha-float {
+  opacity: 0.68;
+}
+.flecha-fadeout {
+  animation: flecha-fadeout 0.66s cubic-bezier(.45,.01,.44,1.01) both;
+  filter: drop-shadow(0 0 24px #fa1e9a) drop-shadow(0 0 14px #fff176) drop-shadow(0 0 16px #1e90ff) blur(3.5px);
+}
+@keyframes flecha-appear {
+  from { opacity: 0; transform: scale(0.4) perspective(100px) rotateY(-10deg);}
+  60% { opacity: 1; transform: scale(1.18) perspective(240px) rotateY(12deg);}
+  85% { opacity: 0.9; transform: scale(0.94) perspective(180px) rotateY(-8deg);}
+  to { opacity: 0.68; transform: scale(1) perspective(200px) rotateY(0deg);}
+}
+@keyframes flecha-fadeout {
+  from { opacity: 0.68; }
+  60% { opacity: 0.2; transform: scale(1.18) perspective(260px) rotateY(25deg);}
+  to { opacity: 0; transform: scale(0.4) perspective(80px) rotateY(-18deg);}
+}
+@media (max-width: 900px) {
+  #piu-flechas .flecha-movil {
+    width: 18px !important;
+    height: 18px !important;
+  }
+}

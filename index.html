@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Guía de actualización de software pad</title>
+  <!-- Fuentes -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Roboto:wght@400;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.1/dist/tailwind.min.css" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
+  <style>
+    /* Enlaces y labels más vistosos */
+    .btn-link {
+      font-family: 'Montserrat', 'Orbitron', Arial, sans-serif !important;
+      font-weight: 700;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      font-size: 1.13rem;
+      padding: 0.7em 2em;
+      border-radius: 9999px;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5em;
+      box-shadow: 0 3px 16px 0 #00e4ff33, 0 2px 8px 0 #1a183599;
+      transition: background 0.2s, color 0.2s, transform 0.14s;
+      border: 2.5px solid var(--rise-cyan, #00e4ff);
+      background: linear-gradient(90deg, #ffe550 80%, #fff176 100%);
+      color: #23244b;
+    }
+    .btn-link:hover {
+      background: linear-gradient(90deg, #fff176 60%, #ffe550 100%);
+      color: #1a1835;
+      transform: scale(1.04);
+      border-color: var(--rise-magenta, #e800f8);
+    }
+    .main-label {
+      font-family: 'Montserrat', 'Orbitron', Arial, sans-serif !important;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-weight: 800;
+      font-size: 1.5rem;
+    }
+    .footer-insta-link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.65em;
+      margin-top: 0.7em;
+      font-family: 'Montserrat', 'Orbitron', Arial, sans-serif;
+      font-weight: 700;
+      font-size: 1.18rem;
+      background: linear-gradient(90deg, #fa7e1e 10%, #d6249f 60%, #285AEB 100%);
+      color: #fff;
+      border-radius: 9999px;
+      padding: 0.5em 1.5em 0.5em 1.3em;
+      min-width: 220px;
+      box-shadow: 0 0 25px #fa7e1e33, 0 0 18px #d6249f22;
+      transition: filter 0.18s, transform 0.18s;
+      border: none;
+    }
+    .footer-insta-link:hover {
+      filter: brightness(1.13) drop-shadow(0 0 8px #fa7e1e88);
+      color: #ffe550;
+      transform: scale(1.05);
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body class="bg-rise-gradient min-h-screen text-white font-roboto overflow-x-hidden">
+
+  <!-- Flechas PIU animadas -->
+  <div id="piu-flechas"></div>
+
+  <header class="relative z-10 py-10 bg-gradient-to-b from-[#1a1835ee] to-[#22234aee] shadow-lg">
+    <div class="container mx-auto px-4 text-center flex flex-col items-center justify-center gap-3">
+      <h1 class="text-3xl md:text-5xl font-orbitron font-bold tracking-widest text-rise-cyan drop-shadow-rise mb-2 flex items-center justify-center gap-2">
+        Guía de actualización de software pad
+      </h1>
+      <h2 class="main-label text-rise-magenta font-bold mb-2 flex items-center gap-2 justify-center">
+        Compatibilidad PIU Rise
+      </h2>
+      <p class="mt-2 text-base md:text-lg text-rise-gray max-w-2xl mx-auto font-roboto">
+        Descarga los archivos necesarios para actualizar tu pad, y sigue los pasos.
+      </p>
+      <p class="mt-2 text-base md:text-lg text-rise-gray max-w-2xl mx-auto font-roboto">
+       <span class="font-bold text-yellow-300">¡Importante!</span> durante la instalacion del ide o la instalacion del codigo si te aparece un mensaje de que algun puerto com o dispositivo arduino leonardo intentando acreditar la confianza de windows tienes que aceptar
+      </p>
+      <!-- Link descarga alineado -->
+      <a href="https://drive.google.com/drive/folders/1VvoCA62r-PAolR3_mVqPHMXbewmWPpYe?usp=drive_link"
+         target="_blank"
+         class="btn-link mt-4"
+      >
+        <span>Descarga de archivos</span>
+      </a>
+    </div>
+  </header>
+
+  <main class="container mx-auto px-2 md:px-8 py-10 space-y-16">
+    <!-- PASO 1 -->
+    <section class="static-card bg-rise-dark rounded-2xl shadow-xl border-t-4 border-rise-cyan max-w-5xl mx-auto overflow-hidden">
+      <div class="flex flex-col md:flex-row">
+        <div class="md:w-1/5 flex items-center justify-center py-8 md:py-0"></div>
+        <div class="md:w-4/5 flex flex-col justify-center p-6 md:p-8">
+          <h3 class="main-label text-rise-cyan font-bold mb-2">
+            1. Instala Arduino IDE
+          </h3>
+          <div class="h-1 w-16 bg-rise-yellow rounded-full mb-3"></div>
+          <p class="text-rise-gray text-base md:text-lg font-roboto">
+            Descarga e instala el programa <b>arduino-ide.exe</b> desde el enlace de arriba antes de continuar.
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- PASO 2 -->
+    <section class="static-card bg-rise-dark rounded-2xl shadow-xl border-t-4 border-rise-magenta max-w-5xl mx-auto overflow-hidden">
+      <div class="flex flex-col md:flex-row">
+        <div class="md:w-1/5 flex items-center justify-center py-8 md:py-0"></div>
+        <div class="md:w-4/5 flex flex-col justify-center p-6 md:p-8">
+          <h3 class="main-label text-rise-magenta font-bold mb-2">
+            2. Abre el archivo <span class="underline">pad.ino</span> con Arduino IDE
+          </h3>
+          <div class="h-1 w-16 bg-rise-yellow rounded-full mb-3"></div>
+          <p class="text-rise-gray text-base md:text-lg font-roboto">
+            Haz doble clic o desde el menú de Arduino IDE, selecciona <b>File → Open</b> y elige <b>pad.ino</b>.
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- PASO 3 -->
+    <section class="static-card bg-rise-dark rounded-2xl shadow-xl border-t-4 border-rise-cyan max-w-5xl mx-auto overflow-hidden">
+      <div class="md:flex">
+        <div class="md:w-2/3 flex-shrink-0 bg-rise-img p-4 flex items-center justify-center">
+          <div class="screenshot-frame bg-[#15172d] rounded-xl border-2 border-rise-cyan overflow-hidden mx-auto max-w-full">
+           
+          </div>
+        </div>
+        <div class="md:w-1/3 flex flex-col justify-center p-6 md:p-8">
+          <h3 class="main-label text-rise-magenta font-bold mb-2">
+            3. Conecta el PAD
+          </h3>
+          <div class="h-1 w-14 bg-rise-yellow rounded-full mb-4"></div>
+          <p class="text-rise-gray text-base md:text-lg font-roboto">
+            Usa el cable USB y espera que el PAD sea reconocido
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- PASO 4 -->
+    <section class="static-card bg-rise-dark rounded-2xl shadow-xl border-t-4 border-rise-magenta max-w-5xl mx-auto overflow-hidden">
+      <div class="md:flex md:flex-row-reverse">
+        <div class="md:w-2/3 flex-shrink-0 bg-rise-img p-4 flex items-center justify-center">
+          <div class="screenshot-frame bg-[#15172d] rounded-xl border-2 border-rise-magenta overflow-hidden mx-auto max-w-full">
+           
+          </div>
+        </div>
+        <div class="md:w-1/3 flex flex-col justify-center p-6 md:p-8">
+          <h3 class="main-label text-rise-cyan font-bold mb-2">
+            4. Selecciona el puerto correcto
+          </h3>
+          <div class="h-1 w-14 bg-rise-yellow rounded-full mb-4"></div>
+          <p class="text-rise-gray text-base md:text-lg font-roboto">
+            En Arduino IDE, ve a Tools &gt; Port y selecciona “(Arduino Leonardo)”.
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- PASO 5 -->
+    <section class="static-card bg-rise-dark rounded-2xl shadow-xl border-t-4 border-rise-cyan max-w-5xl mx-auto overflow-hidden">
+      <div class="md:flex">
+        <div class="md:w-2/3 flex-shrink-0 bg-rise-img p-4 flex items-center justify-center">
+          <div class="screenshot-frame bg-[#15172d] rounded-xl border-2 border-rise-cyan overflow-hidden mx-auto max-w-full">
+            
+          </div>
+        </div>
+        <div class="md:w-1/3 flex flex-col justify-center p-6 md:p-8">
+          <h3 class="main-label text-rise-magenta font-bold mb-2">
+            5. Selecciona el board
+          </h3>
+          <div class="h-1 w-14 bg-rise-yellow rounded-full mb-4"></div>
+          <p class="text-rise-gray text-base md:text-lg font-roboto">
+            Ve a Tools &gt; Board &gt; Arduino AVR Boards y elige Arduino Leonardo.
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- PASO 6 -->
+    <section class="static-card bg-rise-dark rounded-2xl shadow-xl border-t-4 border-rise-magenta max-w-5xl mx-auto overflow-hidden">
+      <div class="md:flex md:flex-row-reverse">
+        <div class="md:w-2/3 flex-shrink-0 bg-rise-img p-4 flex items-center justify-center">
+          <div class="screenshot-frame bg-[#15172d] rounded-xl border-2 border-rise-magenta overflow-hidden mx-auto max-w-full">
+            
+          </div>
+        </div>
+        <div class="md:w-1/3 flex flex-col justify-center p-6 md:p-8">
+          <h3 class="main-label text-rise-cyan font-bold mb-2">
+            6. Verifica el código
+          </h3>
+          <div class="h-1 w-14 bg-rise-yellow rounded-full mb-4"></div>
+          <p class="text-rise-gray text-base md:text-lg font-roboto">
+            Haz clic en el botón de “Sketch” luego en Verify/Compile para compilar el código y revisar que no haya errores.
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- PASO 7 -->
+    <section class="static-card bg-rise-dark rounded-2xl shadow-xl border-t-4 border-rise-cyan max-w-5xl mx-auto overflow-hidden">
+      <div class="md:flex">
+        <div class="md:w-2/3 flex-shrink-0 bg-rise-img p-4 flex items-center justify-center">
+          <div class="screenshot-frame bg-[#15172d] rounded-xl border-2 border-rise-cyan overflow-hidden mx-auto max-w-full">
+           
+          </div>
+        </div>
+        <div class="md:w-1/3 flex flex-col justify-center p-6 md:p-8">
+          <h3 class="main-label text-rise-magenta font-bold mb-2">
+            7. Sube el programa al Arduino
+          </h3>
+          <div class="h-1 w-14 bg-rise-yellow rounded-full mb-4"></div>
+          <p class="text-rise-gray text-base md:text-lg font-roboto">
+            Haz clic en el botón de “Sketch” luego en Upload y espera a que el proceso termine.
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- PASO 8 -->
+    <section class="static-card bg-rise-dark rounded-2xl shadow-xl border-t-4 border-rise-magenta max-w-5xl mx-auto overflow-hidden">
+      <div class="md:flex md:flex-row-reverse">
+        <div class="md:w-2/3 flex-shrink-0 bg-rise-img p-4 flex items-center justify-center">
+          <div class="screenshot-frame bg-[#15172d] rounded-xl border-2 border-rise-magenta overflow-hidden mx-auto max-w-full">
+           
+          </div>
+        </div>
+        <div class="md:w-1/3 flex flex-col justify-center p-6 md:p-8">
+          <h3 class="main-label text-rise-cyan font-bold mb-2">
+            8. ¡Pad actualizado!
+          </h3>
+          <div class="h-1 w-14 bg-rise-yellow rounded-full mb-4"></div>
+          <p class="text-rise-gray text-base md:text-lg font-roboto">
+            Ya puedes probar tu pad actualizado
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="relative z-10 py-10 bg-gradient-to-t from-[#1a1835ee] to-[#22234aee] text-center text-rise-gray text-base mt-16">
+    <div class="flex flex-col items-center justify-center gap-3">
+      <div class="text-xl font-orbitron font-bold text-rise-yellow flex items-center gap-2">
+        Hecho con amor
+        <svg width="22" height="22" fill="none" viewBox="0 0 24 24" class="inline"><path d="M12 21s-5.65-4.35-8.51-7.29A5.5 5.5 0 0112 4.57a5.5 5.5 0 018.51 9.14C17.65 16.65 12 21 12 21z" fill="#e800f8"/></svg>
+      </div>
+      <div class="w-full flex items-center justify-center">
+        <a href="https://www.instagram.com/hand_dancepad" target="_blank" class="footer-insta-link">
+          <!-- Instagram tradicional SVG -->
+          <svg width="28" height="28" viewBox="0 0 448 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="48" y="48" width="352" height="352" rx="80" fill="url(#ig-grad)"/>
+            <defs>
+              <linearGradient id="ig-grad" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#fdf497"/>
+                <stop offset="20%" stop-color="#fdf497"/>
+                <stop offset="50%" stop-color="#fd5949"/>
+                <stop offset="70%" stop-color="#d6249f"/>
+                <stop offset="100%" stop-color="#285AEB"/>
+              </linearGradient>
+            </defs>
+            <rect x="48" y="48" width="352" height="352" rx="80" fill="url(#ig-grad)"/>
+            <circle cx="224" cy="224" r="90" fill="none" stroke="#fff" stroke-width="32"/>
+            <circle cx="336" cy="144" r="24" fill="#fff"/>
+          </svg>
+          <span>@hand_dancepad</span>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="flechas.js"></script>
+</body>
+</html>
