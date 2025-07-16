@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: my-static-site
+    name: handdancepad
     env: static
     staticPublishPath: .
     buildCommand: ""
